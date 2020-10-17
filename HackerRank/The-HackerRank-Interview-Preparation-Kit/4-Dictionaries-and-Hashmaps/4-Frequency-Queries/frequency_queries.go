@@ -41,8 +41,6 @@ func frequencyQueries(queries [][]int) []int {
 				item = 1
 			}
 			result = append(result, item)
-		default:
-			return nil
 		}
 	}
 
