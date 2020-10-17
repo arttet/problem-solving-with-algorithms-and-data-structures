@@ -13,19 +13,12 @@ func minimumAbsoluteDifference(arr []int) int {
 
 	var result int = math.MaxInt32
 	for i := 0; i < len(arr)-1; i++ {
-		if diff := abs(arr[i] - arr[i+1]); diff < result {
+		if diff := arr[i+1] - arr[i]; diff < result {
 			result = diff
 		}
 	}
 
 	return result
-}
-
-func abs(value int) int {
-	if value < 0 {
-		return -value
-	}
-	return value
 }
 
 func main() {
