@@ -1,5 +1,5 @@
 # [Merge Sort: Counting Inversions](https://www.hackerrank.com/challenges/ctci-merge-sort/)
 
-Complexity Analysis:
-* Time complexity: O(n * log(n)).
-* Space complexity: O(n).
+__Complexity Analysis__:
+* Time complexity: _O(n * log n)_.
+* Space complexity: _O(n)_.

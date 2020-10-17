@@ -6,7 +6,7 @@ import (
 	"os"
 )
 
-func countingValleys(n int, s string) int {
+func countingValleys(_ int, s string) int {
 	var valleys int
 	var currentLevel int
 

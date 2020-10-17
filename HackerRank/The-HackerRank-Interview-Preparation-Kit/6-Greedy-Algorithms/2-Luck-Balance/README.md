@@ -1,5 +1,5 @@
 # [Luck Balance](https://www.hackerrank.com/challenges/luck-balance)
 
-Complexity Analysis:
-* Time complexity: O(N * log(N)).
-* Space complexity: O(1).
+__Complexity Analysis__:
+* Time complexity: _O(n * log n)_.
+* Space complexity: _O(1)_.

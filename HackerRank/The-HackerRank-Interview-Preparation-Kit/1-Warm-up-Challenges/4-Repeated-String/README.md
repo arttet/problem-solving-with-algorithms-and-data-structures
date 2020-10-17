@@ -1,5 +1,5 @@
 # [Repeated String](https://www.hackerrank.com/challenges/repeated-string)
 
-Complexity Analysis:
-* Time complexity: O(n), n = len(s).
-* Space complexity: O(1).
+__Complexity Analysis__:
+* Time complexity: _O(n)_, _n_ = len(s).
+* Space complexity: _O(1)_.

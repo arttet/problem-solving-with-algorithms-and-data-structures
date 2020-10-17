@@ -10,11 +10,11 @@ func sherlockAndAnagrams(s string) int {
 	n := len(s)
 	substrings := make([][][]int, n-1)
 
-	/// Work on one small test case:
-	/// "abba":
-	/// a b b a
-	/// ab bb ba
-	/// abb bba
+	// Work on one small test case:
+	// "abba":
+	// a b b a
+	// ab bb ba
+	// abb bba
 	for length := 1; length < n; length++ {
 		for begin := 0; begin <= n-length; begin++ {
 			substring := s[begin : begin+length]

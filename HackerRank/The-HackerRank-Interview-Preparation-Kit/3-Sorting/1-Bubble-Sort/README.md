@@ -1,5 +1,5 @@
 # [Sorting: Bubble Sort](https://www.hackerrank.com/challenges/ctci-bubble-sort)
 
-Complexity Analysis:
-* Time complexity: O(n ^ 2).
-* Space complexity: O(1).
+__Complexity Analysis__:
+* Time complexity: _O(n<sup>2</sup>)_.
+* Space complexity: _O(1)_.

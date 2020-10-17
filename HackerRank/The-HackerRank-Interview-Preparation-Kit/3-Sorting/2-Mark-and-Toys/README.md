@@ -1,5 +1,5 @@
 # [Mark and Toys](https://www.hackerrank.com/challenges/mark-and-toys)
 
-Complexity Analysis:
-* Time complexity: O(n * log(n)).
-* Space complexity: O(1).
+__Complexity Analysis__:
+* Time complexity: _O(n * log n)_.
+* Space complexity: _O(1)_.

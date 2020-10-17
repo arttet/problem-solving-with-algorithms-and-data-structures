@@ -2,56 +2,21 @@ package main
 
 import (
 	"errors"
-	"io/ioutil"
-	"os"
-	"strings"
+	"fmt"
 	"testing"
 
+	"github.com/arttet/problem-solving-with-algorithms-and-data-structures/utility"
 	"github.com/stretchr/testify/assert"
 )
 
-type testCase struct {
-	input  string
-	output string
-}
-
 func TestOK(t *testing.T) {
-	ast := assert.New(t)
-
-	tests := []testCase{
-		{"input/input00.txt", "output/output00.txt"},
-		{"input/input01.txt", "output/output01.txt"},
-		{"input/input10.txt", "output/output10.txt"},
-	}
-
-	for i := range tests {
-		func() {
-			stdin, err := os.Open(tests[i].input)
-			checkError(err)
-			defer stdin.Close()
-
-			stdout, err := ioutil.TempFile("", "output.*.txt")
-			checkError(err)
-			defer os.Remove(stdout.Name())
-
-			os.Stdin, os.Stdout = stdin, stdout
-
-			main()
-
-			content, err := ioutil.ReadFile(tests[i].output)
-			checkError(err)
-			expected := strings.TrimSpace(string(content))
-
-			content, err = ioutil.ReadFile(stdout.Name())
-			checkError(err)
-			output := strings.TrimSpace(string(content))
-
-			content, err = ioutil.ReadFile(tests[i].input)
-			checkError(err)
-			input := strings.TrimSpace(string(content))
-
-			ast.Equal(expected, output, "Test Case: %v", input)
-		}()
+	tests := []int{0, 1, 10}
+	for _, i := range tests {
+		test := utility.TestCase{
+			In:  fmt.Sprintf("input/input%02d.txt", i),
+			Out: fmt.Sprintf("output/output%02d.txt", i),
+		}
+		test.RunTest(t, main)
 	}
 }
 

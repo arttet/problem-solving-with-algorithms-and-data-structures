@@ -1,5 +1,5 @@
 # [Common Child](https://www.hackerrank.com/challenges/common-child)
 
-Complexity Analysis:
+__Complexity Analysis__:
 * Time complexity: O(N * M).
 * Space complexity: O(N * M).

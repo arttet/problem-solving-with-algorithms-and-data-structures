@@ -1,5 +1,5 @@
 # [Two Strings](https://www.hackerrank.com/challenges/two-strings)
 
-Complexity Analysis:
-* Time complexity: O(n + m).
-* Space complexity: O(n).
+__Complexity Analysis__:
+* Time complexity: _O(n + m)_.
+* Space complexity: _O(n)_.

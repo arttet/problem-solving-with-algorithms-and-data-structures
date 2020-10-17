@@ -1,5 +1,5 @@
 # [New Year Chaos](https://www.hackerrank.com/challenges/new-year-chaos)
 
-Complexity Analysis:
-* Time complexity: O(n).
-* Space complexity: O(1).
+__Complexity Analysis__:
+* Time complexity: _O(n)_.
+* Space complexity: _O(1)_.

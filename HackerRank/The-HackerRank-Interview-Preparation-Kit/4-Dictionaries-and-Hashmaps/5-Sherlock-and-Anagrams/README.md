@@ -1,5 +1,5 @@
 # [Sherlock and Anagrams](https://www.hackerrank.com/challenges/sherlock-and-anagrams)
 
-Complexity Analysis:
-* Time complexity: O(n * n * n).
-* Space complexity: O(26 * n * n), n is the string's length.
+__Complexity Analysis__:
+* Time complexity: _O(n<sup>3</sup>)_.
+* Space complexity: _O(26 n<sup>2</sup>)_, _n_ is the string's length.

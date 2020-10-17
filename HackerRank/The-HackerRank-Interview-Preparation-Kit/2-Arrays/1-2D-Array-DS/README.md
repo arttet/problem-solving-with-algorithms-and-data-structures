@@ -1,5 +1,5 @@
 # [2D Array - DS](https://www.hackerrank.com/challenges/2d-array)
 
-Complexity Analysis:
-* Time complexity: O(n + m).
-* Space complexity: O(1).
+__Complexity Analysis__:
+* Time complexity: _O(n + m)_.
+* Space complexity: _O(1)_.

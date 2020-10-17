@@ -48,6 +48,7 @@ func main() {
 
 	result := sockMerchant(n, arr)
 	fmt.Fprint(writer, result)
+
 	writer.Flush()
 }
 

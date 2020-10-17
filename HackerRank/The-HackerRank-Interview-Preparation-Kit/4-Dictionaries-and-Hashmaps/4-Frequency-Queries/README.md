@@ -1,5 +1,5 @@
 # [Frequency Queries](https://www.hackerrank.com/challenges/frequency-queries)
 
-Complexity Analysis:
-* Time complexity: O(q).
-* Space complexity: O(q).
+__Complexity Analysis__:
+* Time complexity: _O(q)_.
+* Space complexity: _O(q)_.

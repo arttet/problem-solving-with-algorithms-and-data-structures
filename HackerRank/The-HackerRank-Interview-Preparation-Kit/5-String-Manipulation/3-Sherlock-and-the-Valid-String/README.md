@@ -1,5 +1,5 @@
 # [Sherlock and the Valid String](https://www.hackerrank.com/challenges/sherlock-and-valid-string)
 
-Complexity Analysis:
-* Time complexity: O(n).
-* Space complexity: O(26).
+__Complexity Analysis__:
+* Time complexity: _O(n)_.
+* Space complexity: _O(26)_.
