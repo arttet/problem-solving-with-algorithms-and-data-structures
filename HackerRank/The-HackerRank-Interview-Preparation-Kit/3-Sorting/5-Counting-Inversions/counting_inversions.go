@@ -42,7 +42,7 @@ func merge(arr []int, temp []int, left int, middle int, right int) int64 {
 	}
 
 	k += copy(temp[k:], arr[i:middle])
-	k += copy(temp[k:], arr[j:right])
+	copy(temp[k:], arr[j:right])
 	copy(arr[left:right], temp[left:right])
 
 	return inversions
@@ -68,7 +68,8 @@ func main() {
 	_, err = fmt.Fscan(reader, &d)
 	checkError(err)
 
-	for i, n := 0, 0; d > 0; d-- {
+	var n int
+	for i := 0; d > 0; d-- {
 		_, err = fmt.Fscan(reader, &n)
 		checkError(err)
 

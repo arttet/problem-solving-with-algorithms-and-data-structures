@@ -22,7 +22,6 @@ func activityNotifications(expenditures []int, d int) int {
 
 		cursor := 0
 		left := -1
-		right := -1
 
 		for j = 0; j < maxExpenditure; j++ {
 			cursor += histogram[j]
@@ -39,7 +38,7 @@ func activityNotifications(expenditures []int, d int) int {
 				}
 
 				if cursor > d/2 && left != -1 {
-					right = j
+					right := j
 					doubleMedian = left + right
 					break
 				}

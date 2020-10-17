@@ -7,7 +7,8 @@ import (
 )
 
 func countSwaps(arr []int) {
-	var i, j, n int = 0, 0, len(arr)
+	var i, j int
+	n := len(arr)
 
 	var numSwaps int
 	for i = 0; i < n; i++ {
