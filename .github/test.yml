@@ -38,7 +38,7 @@ steps:
     summaryFileLocation: $(System.DefaultWorkingDirectory)/**/coverage.xml
 
 - powershell: |
-    $junitXml = "junit/unit-test.xml"
+    $junitXml = "$(System.DefaultWorkingDirectory)/**/report.xml"
     $(Get-Content $junitXml | Out-String) -match 'failures="(.*?)"'
     if ($matches[1] -eq 0)
     {
