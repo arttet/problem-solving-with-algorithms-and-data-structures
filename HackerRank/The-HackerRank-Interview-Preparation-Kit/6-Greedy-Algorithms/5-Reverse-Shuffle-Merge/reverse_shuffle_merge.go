@@ -7,7 +7,43 @@ import (
 )
 
 func reverseShuffleMerge(s string) string {
-	return s
+	unused := [26]int{}
+	used := [26]int{}
+	required := [26]int{}
+
+	for i := range s {
+		unused[s[i]-'a']++
+	}
+
+	for i := range unused {
+		required[i] = unused[i] / 2
+	}
+
+	n := len(s)
+	result := make([]byte, n/2)
+
+	for i, j := n-1, 0; i >= 0; i-- {
+		ch := s[i] - 'a'
+
+		if i == n-1 || used[ch] < required[ch] {
+			for j > 0 && ch < result[j-1] && used[result[j-1]]-1+unused[result[j-1]] >= required[result[j-1]] {
+				j--
+				used[result[j]]--
+			}
+
+			result[j] = ch
+			j++
+			used[ch]++
+		}
+
+		unused[ch]--
+	}
+
+	for i := range result {
+		result[i] += 'a'
+	}
+
+	return string(result)
 }
 
 func main() {
