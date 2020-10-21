@@ -13,13 +13,11 @@ type node struct {
 	right *node
 }
 
-func newTree(indexes [][]int) (*node, int) {
+func newTree(indexes [][]int) *node {
 	var queue []*node
 
 	root := &node{1, 1, nil, nil}
 	queue = append(queue, root)
-
-	maxLevel := 1
 
 	for i := range indexes {
 		left, right := indexes[i][0], indexes[i][1]
@@ -37,11 +35,10 @@ func newTree(indexes [][]int) (*node, int) {
 			queue = append(queue, rightNode)
 		}
 
-		maxLevel = current.level
 		queue = queue[1:]
 	}
 
-	return root, maxLevel
+	return root
 }
 
 func (tree *node) traverseInorder(result *[]int) {
@@ -56,35 +53,26 @@ func (tree *node) traverseInorder(result *[]int) {
 	}
 }
 
-func (tree *node) swap(levels []int) {
+func (tree *node) swap(k int) {
 	if tree.left != nil {
-		tree.left.swap(levels)
+		tree.left.swap(k)
 	}
 
 	if tree.right != nil {
-		tree.right.swap(levels)
+		tree.right.swap(k)
 	}
 
-	for _, level := range levels {
-		if tree.level == level {
-			tree.left, tree.right = tree.right, tree.left
-		}
+	if tree.level%k == 0 {
+		tree.left, tree.right = tree.right, tree.left
 	}
 }
 
 func swapNodes(indexes [][]int, queries []int) [][]int {
 	result := make([][]int, len(queries))
-	tree, maxLevel := newTree(indexes)
+	tree := newTree(indexes)
 
 	for i, k := range queries {
-		var levels []int
-		for level := 1; level <= maxLevel; level++ {
-			if level%k == 0 {
-				levels = append(levels, level)
-			}
-		}
-
-		tree.swap(levels)
+		tree.swap(k)
 		tree.traverseInorder(&result[i])
 	}
 
